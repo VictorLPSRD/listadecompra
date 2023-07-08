@@ -1,16 +1,20 @@
-import os 
+import os #importei a biblioteca (os) 
 
-print('SUPERMERCADO RB')
-    opcao = input('[i]nserir [a]pagar [l]istar: ')
+lista = [] # lista inicia vazia 
+
+while True: #laço de repetição para que a ação fique se repetindo 
+    
+    print('SUPERMERCADO RB')
+    opcao = input('[i]nserir [a]pagar [l]istar: ').lower()# opções do usuario 
     #criação de blocos para inserir dados na lista 
     if opcao == 'i':
-        os.system('clear')
+        os.system('cls') # usei o método system e o (cls) para limpa a biblioteca .
         valor = input('Nome e preço: ')
-        lista.append(valor)
+        lista.append(valor) 
   
     elif opcao == 'a':
         indice_str = input('Escolha o índice para apagar: ' )
-        try:
+        try: 
             indice = int(indice_str)
             del lista[indice]#apaga dados da lista 
             #capitura erros com execept 
@@ -24,5 +28,6 @@ print('SUPERMERCADO RB')
         os.system('cls')
 
         for i, valor in enumerate(lista):
-            print(i, valor)
+            print(i,valor)
     else:
+        print('Por favor, escolha i, a ou l.')
