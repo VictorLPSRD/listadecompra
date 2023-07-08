@@ -5,7 +5,7 @@ lista = [] # lista inicia vazia
 while True: #laço de repetição para que a ação fique se repetindo 
     
     print('SUPERMERCADO RB')
-    opcao = input('[i]nserir [a]pagar [l]istar: ').lower()# opções do usuario 
+    opcao = input('[i]nserir [a]pagar [l]istar: ').lower()# opções do usuario. lower é para coso usuario coloque letra maiúsculas ela vire menuscula.
     #criação de blocos para inserir dados na lista 
     if opcao == 'i':
         os.system('cls') # usei o método system e o (cls) para limpa a biblioteca .
@@ -13,7 +13,12 @@ while True: #laço de repetição para que a ação fique se repetindo
         lista.append(valor) 
   
     elif opcao == 'a':
+
+        for i, valor in enumerate(lista):
+            print(i,valor)
+            print()
         indice_str = input('Escolha o índice para apagar: ' )
+
         try: 
             indice = int(indice_str)
             del lista[indice]#apaga dados da lista 
