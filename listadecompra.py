@@ -1,4 +1,6 @@
- print('SUPERMERCADO RB')
+import os 
+
+print('SUPERMERCADO RB')
     opcao = input('[i]nserir [a]pagar [l]istar: ')
     #criação de blocos para inserir dados na lista 
     if opcao == 'i':
